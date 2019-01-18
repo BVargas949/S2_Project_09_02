@@ -11,27 +11,19 @@
 
 */
 
+/* The input selector with the "not type attribute selector" was used to change the way the text boxes appear depending if the needed information was been written correctly. The "invalid" and "valid" attributes were used to display an image to tell the user if the information they wrote is acceptable.   */
 
 /* Validation Styles */
-input#firstBox:focus,
-input#lastBox:focus,
-input#streetBox:focus,
-input#streetBox2:focus,
-input#cityBox:focus,
-input#stateBox:focus,
-input#zipBox:focus,
-input#countryBox:focus,
-input#phoneBox:focus,
-input#cscBox:focus {
+input:not([type='radio']):focus {
     background-color: rgb(255, 218, 165);
 }
 
-input:not([type='radio']):focus:invalid {
-    background: rgb(215, 255, 215) url(sb_invalid.png);
+input:not([type='radio']):focus:valid {
+    background: rgb(215, 255, 215) url(sb_valid.png) bottom right/contain no-repeat;
 
 }
 
 input:not([type='radio']):focus:invalid {
-    background: rgb(215, 245, 215) url(sb_invalid.png);
+    background: rgb(215, 245, 215) url(sb_invalid.png) bottom right/contain no-repeat;
 
 }
